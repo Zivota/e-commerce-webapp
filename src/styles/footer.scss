@@ -1,0 +1,172 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.footer {
+  position: relative;
+  padding: 4rem 2rem;
+  background-color: $blue;
+  @include flex(column, center, center);
+  color: $textWhite;
+
+  @media screen and (min-width: $hrPhone) {
+    padding: 4rem 6rem;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 32px;
+    grid-row-gap: 16px;
+    padding: 4rem 2rem;
+  }
+
+  @media screen and (min-width: $laptop) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 4rem 10%;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+}
+
+.footer__about {
+  width: 100%;
+  height: 100%;
+
+  p {
+    padding: 1.3rem 0;
+  }
+}
+
+.footer__reach {
+  width: 100%;
+  margin-top: 1.5rem;
+  height: 100%;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
+  }
+
+  h3 {
+    margin-bottom: 1.3rem;
+  }
+
+  img {
+    height: 1rem;
+  }
+
+  a {
+    color: $textWhite;
+    text-decoration: none;
+  }
+}
+
+.footer__subscribe {
+  width: 100%;
+  margin-top: 1.5rem;
+  height: 100%;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
+  }
+
+  h3 {
+    margin-bottom: 1.3rem;
+  }
+
+  input {
+    padding: 1rem;
+    width: 100%;
+    background-color: rgb(76, 84, 128);
+    color: $textWhite;
+    border-radius: 0.5rem;
+
+    &::placeholder {
+      color: $textWhite;
+    }
+
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+.footer__map {
+  height: 15rem;
+  width: 100%;
+  display: block;
+  background-color: rgb(76, 84, 128);
+  margin-top: 1.5rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+
+  img {
+    height: 100%;
+    width: 100%;
+    transform: scale(1.5);
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
+  }
+}
+
+.reachFlex {
+  @include flex(row, center, flex-start);
+  padding: 0.25rem 0;
+
+  &:hover {
+    color: $yellow;
+    @include transition(0.2s);
+  }
+}
+
+.footer__imgs {
+  @include flex(center, center, flex-start);
+  padding: 0.5rem 0;
+
+  img {
+    height: 1rem;
+  }
+
+  span {
+    padding: 0.5rem;
+    background-color: $black;
+    border-radius: 50%;
+    margin-right: 0.4rem;
+    @include flex(row, center, center);
+
+    &:hover {
+      background-color: $yellow;
+      @include transition(0.2s);
+    }
+  }
+}
+
+.imgHolder {
+  width: 2rem;
+}

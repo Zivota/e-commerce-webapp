@@ -1,0 +1,65 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.about {
+  min-height: 50vh;
+  width: 100%;
+  background-color: $blue;
+  padding: 4rem 2rem;
+  @include flex(column, center, center);
+
+  @media screen and (min-width: $tablet) {
+    @include flex(row, center, center);
+  }
+
+  &__imgHolder {
+    width: 100%;
+    height: 25rem;
+    @include flex(row, center, center);
+
+    @media screen and (min-width: $tablet) {
+      width: 50%;
+      @include flex(row, center, flex-end);
+      padding-right: 2rem;
+    }
+
+    @media screen and (min-width: $laptop) {
+      height: 30rem;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-right: 4rem;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__infoHolder {
+    color: $textWhite;
+    padding: 2rem 0;
+
+    @media screen and (min-width: $tablet) {
+      width: 50%;
+      padding-left: 2rem;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-left: 4rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+    }
+
+    p {
+      padding: 2rem 0;
+      max-width: 40rem;
+    }
+
+    button {
+      margin-top: 0.5rem;
+    }
+  }
+}

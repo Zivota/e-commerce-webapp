@@ -1,0 +1,40 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.menu {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  @include flex(column, center, center);
+  @media screen and (min-width: $tablet) {
+    width: auto;
+  }
+
+  ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    text-align: center;
+    padding: 1rem 0;
+    @media screen and (min-width: $tablet) {
+      @include flex(row, center, center);
+    }
+  }
+
+  li {
+    padding: 0.6rem 0;
+    @media screen and (min-width: $tablet) {
+      padding: 0;
+      margin-left: 2rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+
+  img {
+    height: 1.5rem;
+  }
+}

@@ -1,0 +1,106 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.watch {
+  position: relative;
+  @include flex(column, center, space-between);
+  width: 100%;
+  background-color: $textWhite;
+  margin: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  @include transition(0.3s);
+
+  &:hover .infoHolder {
+    @include flex(row, center, center);
+    @include transition(0.3s);
+  }
+
+  @media screen and (min-width: $hrPhone) {
+    width: 15rem;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 22rem;
+  }
+
+  @media screen and (min-width: $laptop) {
+    width: 28rem;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 21%;
+    max-width: 24rem;
+  }
+
+  &::before {
+    position: absolute;
+    height: 2.3rem;
+    width: 4rem;
+    background-color: $yellow;
+    top: 0;
+    left: 0;
+    content: "New";
+    @include flex(row, center, center);
+    color: white;
+    font-size: 1rem;
+  }
+
+  img {
+    height: 11rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    width: 100%;
+    padding: 1rem 1rem;
+    @include flex(row, center, space-between);
+  }
+}
+
+.featured {
+  @media screen and (min-width: $hrPhone) {
+    width: 32rem;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 22rem;
+  }
+
+  @media screen and (min-width: $laptop) {
+    width: 28rem;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 43.7%;
+    max-width: 50rem;
+  }
+
+  &::before {
+    content: "Featured";
+    width: 7rem;
+  }
+}
+
+.infoHolder {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  @include transition(0.3s);
+
+  button {
+    margin: 0 0.5rem;
+    height: 2.5rem;
+    width: 8rem;
+    color: $textWhite;
+    font-size: 1rem;
+    font-weight: 300;
+
+    a {
+      font-weight: 400;
+    }
+  }
+}

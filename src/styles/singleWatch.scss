@@ -1,0 +1,83 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.singleWatch {
+  @include flex(column, center, center);
+  text-align: center;
+  padding: 2rem 2rem;
+  width: 100%;
+  min-height: calc(100vh - 4rem);
+  background-color: $blue;
+
+  @media screen and (min-width: $tablet) {
+    @include flex(row, center, center);
+    min-height: calc(100vh - 5.75rem);
+  }
+
+  &__imgHolder {
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      width: 50%;
+      @include flex(row, center, center);
+    }
+
+    @media screen and (min-width: $laptop) {
+      // @include flex(row, center, flex-end);
+      width: auto;
+      margin: 0 4rem;
+    }
+
+    img {
+      width: auto;
+      height: 15rem;
+
+      @media screen and (min-width: $tablet) {
+        height: 25rem;
+        margin: auto;
+      }
+
+      @media screen and (min-width: $laptop) {
+        min-height: 30rem;
+        height: 70vh;
+        margin: 0;
+      }
+    }
+  }
+
+  &__info {
+    width: 100%;
+    padding: 2rem 0;
+    @include flex(column, center, center);
+
+    @media screen and (min-width: $tablet) {
+      width: 50%;
+    }
+
+    @media screen and (min-width: $laptop) {
+      width: auto;
+      margin: 0 4rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      color: $textWhite;
+
+      @media screen and (min-width: $laptop) {
+        font-size: 2.5rem;
+      }
+    }
+
+    p {
+      padding: 1.5rem 0;
+      max-width: 30rem;
+      color: grey;
+
+      @media screen and (min-width: $laptop) {
+        width: 25rem;
+        font-size: 1.1rem;
+        padding: 2.5rem 0;
+      }
+    }
+  }
+}

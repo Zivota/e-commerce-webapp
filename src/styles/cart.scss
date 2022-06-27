@@ -1,0 +1,105 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.cart {
+  position: relative;
+  min-height: calc(100vh - 4rem);
+  width: 100%;
+  @include flex(column, center, flex-start);
+  padding: 2rem;
+
+  @media screen and (min-width: $tablet) {
+    min-height: 50.9vh;
+  }
+
+  h2 {
+    position: absolute;
+    color: $blue;
+    top: 40%;
+    transform: translateY(-40%);
+    font-size: 2rem;
+  }
+}
+
+.cartItem {
+  width: 100%;
+  max-width: 60rem;
+  height: auto;
+  @include flex(row, center, space-between);
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid grey;
+
+  span {
+    color: $black;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+.cartItem__infoHolder {
+  @include flex(row, center, center);
+
+  img {
+    height: 4rem;
+  }
+
+  .cartItem__info {
+    @include flex(column, flex-start, space-between);
+    height: 4rem;
+    margin-left: 0.8rem;
+
+    button {
+      color: grey;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.cartItem__mathInfo {
+  @include flex(column, center, space-between);
+  height: 5rem;
+  width: auto;
+
+  @media screen and (min-width: $tablet) {
+    @include flex(row, center, space-between);
+    width: 20rem;
+  }
+
+  .mathInfo__holder {
+    @include flex(row, center, space-between);
+    width: 6rem;
+    color: grey;
+    font-size: 0.9rem;
+
+    &:nth-child(n + 2) {
+      @media screen and (min-width: $tablet) {
+        @include flex(column, center, space-between);
+        height: 3.5rem;
+      }
+    }
+
+    img {
+      height: auto;
+      width: 80%;
+      opacity: 0.6;
+    }
+  }
+
+  .mathInfo__amount {
+    font-weight: 400;
+    border: 1px solid grey;
+    height: 1.5rem;
+    width: 2rem;
+    border-radius: 0.2rem;
+    color: $black;
+    @include flex(row, center, center);
+  }
+
+  button {
+    height: 1.5rem;
+    width: 1.5rem;
+    border: none;
+    background: none;
+  }
+}

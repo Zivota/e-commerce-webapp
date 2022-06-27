@@ -1,0 +1,36 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.navbar {
+  width: 100%;
+  @include flex(row, center, space-between);
+  padding: 1rem 2rem;
+  background-color: white;
+
+  @media screen and (min-width: $tablet) {
+    padding: 1rem 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.burgerBtn {
+  height: 0.8rem;
+  width: 2.5rem;
+  @include flex(column, center, space-between);
+  cursor: pointer;
+
+  span {
+    width: 100%;
+    height: 2px;
+    background-color: $black;
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .burgerBtn {
+    display: none;
+  }
+}
