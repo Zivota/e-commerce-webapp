@@ -1,3 +1,14 @@
+# Modern React e-commerce App
+
+Fully functional dynamic React app with modern UI, made completely from scratch using React.js, SCSS, and React Router. For state management, I've used React Context API. This e-commerce store is selling watches, it has 7 different smart watches which all can be accessed individually for more information. App has an advanced cart, also made from scratch, which allows you to add or remove items from the cart, control the number of items, and dynamically calculate the total price of that single item. The checkout button will calculate the total price and give you the option of choosing different shipping methods which will also dynamically calculate the total price state. The basic design is downloaded from "Free HTML templates" but none of the code has been used, only images, from there I've built the rest of the app. Here you can check how the theme is looking: https://html.design/preview/?theme=timups. Note: My intention wasn't to copy the design perfectly, I've used it as a foundation to have something, to begin with, and build the rest of the app from there. Design is responsive on all devices, I've used CSS flex and CSS grid for styling. Also, in the future, I would like to add animations to single watch cards and testimonial cards as well as the menu, but currently, I was focused on React logic and pixel-perfect layout. 
+
+## You can check how the app is looking and working here:
+Note: Note: If the dark mode is on, please turn it off for a better experience.
+
+timupsreact.netlify.app
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
