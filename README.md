@@ -5,7 +5,7 @@ Fully functional dynamic React app with modern UI, made completely from scratch 
 ## You can check how the app is looking and working here:
 Note: Note: If the dark mode is on, please turn it off for a better experience.
 
-timupsreact.netlify.app
+https://timupsreact.netlify.app/
 
 
 
